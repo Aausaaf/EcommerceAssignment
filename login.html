@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+           
+        }
+        body{
+           
+            background-color: #00FFFFFF;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+        .main{
+            width: 43vw;
+            height: 60vh;
+            margin: auto;
+            border: 0.3vw solid white;
+            border-radius:1.3vw;
+            margin-top: 14vh;
+            color: blueviolet;
+            text-align: center;
+
+        }
+        h1{
+            font-size: 3.6vw;
+            margin-left: -10vw;
+            margin-top: 5vh;
+            text-decoration: underline;
+            
+        }
+        h1:hover{
+            color: blue;
+        }
+        p{
+            font-size: 1.4vw;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 550;
+            margin-left: -23vh;
+            margin-top: 1vh;
+        }
+        p:hover{
+            color: blue;
+            cursor: pointer;
+        }
+        input{
+            margin-left: -13vh;
+            position: relative;
+         
+            border: none;
+            outline-style: none;
+               
+            background-color: #00FFFFFF;
+            border-bottom: 0.2vw solid white;
+        }
+        button{
+            width: 15vw;
+            height: 5vh;
+            margin-left: -6vw;
+            background-color: blueviolet;
+            border: none;
+            border: 0.1vh solid blueviolet;
+            border-radius: 4vw;
+            margin-top: 3vw;
+        }
+        button:hover{
+            background-color: blue;
+        }
+        input::placeholder{
+            color: blueviolet;
+            font-size: 1vw;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Login</h1>
+        <p style="margin-left: -36vh; margin-top: 4vh;" >Email :</p>
+        <input type="email" id="email" placeholder="Enter email" />
+       
+        <p style="margin-left: -31.5vh;">Password :</p>
+        <input type="password" id="password" placeholder="Enter Password"/>
+        <br>
+   <a href="women.html" id="log"> <div > <button onclick="login()" >Login</button></div></a>
+    </div>
+    <script>
+        let email = document.getElementById("email")
+        let password = document.getElementById("password")
+        let log  = document.getElementById("log")
+        function login()
+        {
+            var array = JSON.parse(localStorage.getItem("signup"))
+            console.log(array.length)
+            for(let i = 0 ; i < array.length ;i++) {
+                console.log(email.value)
+                console.log(password.value)
+               // console.log(element.emails)
+                if(array[i].emails == email.value && array[i].passwords == password.value)
+                {
+                    
+                   return
+                    
+
+                }
+                
+                
+            }
+            alert("Enter correct details")
+                   log.href = ""
+                   return
+        }
+        
+    </script>
+</body>
+</html>

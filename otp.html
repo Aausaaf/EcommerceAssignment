@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+           
+        }
+        body{
+           
+            background-color: #00FFFFFF;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+        }
+        .main{
+            width: 43vw;
+            height: 60vh;
+            margin: auto;
+            border: 0.3vw solid white;
+            border-radius:1.3vw;
+            margin-top: 14vh;
+            color: blueviolet;
+            text-align: center;
+
+        }
+        h1{
+            font-size: 4.5vw;
+            margin-left: 0vw;
+            margin-top: 2vh;
+            text-decoration: underline;
+            letter-spacing: 1vh;
+           
+            
+        }
+        p{
+            font-size: 1.4vw;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 550;
+            margin-left: -39vh;
+            margin-top: 1vh;
+        }
+        input{
+            margin-left: -5.5vh;
+            position: relative;
+            top:0.1vh;
+            border: none;
+            outline-style: none;
+              
+            background-color: #00FFFFFF;
+            border-bottom: 0.2vw solid white;
+        }
+        button{
+            width: 15vw;
+            height: 5vh;
+            margin-left: -2.2vw;
+            background-color: blueviolet;
+            border: none;
+            border: 0.1vh solid blueviolet;
+            border-radius: 4vw;
+            margin-top: 2.5vw;
+        }
+        button:hover{
+            background-color: blue;
+        }
+        input::placeholder{
+            color: blueviolet;
+            font-size: 1.1vw;
+            font-weight: 100;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>OTP</h1>
+        <p style="margin-left: -21vh; margin-top: 7vh; margin-bottom: 2vh;" >Otp Number : </p>
+       
+        <input type="text" id="numb" placeholder="Enter Your Otp Number" />
+        
+        <br>
+     <button  type="submit" onclick="otpes()" >Submit</button>
+   
+    </div>
+    <script>
+        var numb = document.getElementById("numb")
+       
+         
+
+        function otpes()
+        {
+            var a  = numb.value
+              a = parseInt(a)
+
+            numb.value = ""
+            console.log(a)
+           
+          if(a === 1234  )
+          {
+            alert("Payment Successfull")
+             return
+        
+          }
+          else{
+              alert("please fill correct OTP")
+             
+              return
+              
+          }
+          // var a = document.createElement('a')
+          // a.href = login.html
+         //  sign.append(a)
+        }
+    </script>
+</body>
+</html>

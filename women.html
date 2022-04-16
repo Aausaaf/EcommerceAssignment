@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            min-height: 370vh;
+        }
+        .navbar{
+            width: 98.5vw;
+            height: 12vh;
+            background-color: blueviolet;
+            color: white;
+           
+
+
+
+        }
+        .navbar ul{
+            list-style: none;
+            display: inline-flex;
+            font-size: 1.7vw;
+            font-weight: 550;
+            margin-top:3.4vh;
+            margin-left: 30vw;
+                }
+                .navbar ul a 
+                {
+                    color: white;
+                    text-decoration: none;
+                }
+                .navbar ul a li
+                {
+                  
+                    
+                    margin-left: 5.5vw;
+                }
+                .navbar ul a li:hover{
+                    color: blue;
+                }
+        #cpntainerers{
+            width: 90vw;
+            margin-left: 4vw;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 5vh;
+            
+
+        }
+        .list{
+            width: 21vw;
+            height: 75vh;
+            border: 0.1vh solid transparent;
+            margin-top: 8vh;
+            
+
+
+        }
+        .imagebox{
+            width: 20.8vw;
+            height: 50vh;
+            border: 0.1vh solid transparent;
+            border-radius: 1.4vw;
+            overflow: hidden;
+           
+            
+        }
+        .image{
+            width: 100%;
+            height: 100%;
+        }
+        button{
+            width: 14vw;
+            height: 5vh;
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            border: 0.1vh solid blueviolet;
+            border-radius: 2vw;
+            font-weight: 550;
+            margin-left: 3.3vw;
+            margin-top: 2vh;
+        }
+        button:hover{
+            background-color: blue;
+        }
+        .price{
+            color: red;
+            font-weight: 550;
+            margin-top: 2.3vh;
+            margin-left: 7.6vw;
+        }
+        .price:hover{
+            color: blueviolet;
+        }
+        .title{
+            margin-top: 2vh;
+            padding: 0.15vh;
+            margin-left: 3vh;
+        }
+        .title:hover{
+            color: green;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <span style="font-size: 2.4vw; font-weight: 650; margin-left: 6vw; position: relative;top: 0.7vh;">LOGO</span>
+        <ul>
+           <a href="men.html"> <li>Man</li></a>
+            <a href="women.html"><li>Women</li></a>
+            <a href="signup.html"><li>Sign up</li></a>
+           <a href="login.html"> <li>Login</li></a>
+           <a href="addtocard.html"><li>Cart</li></a>
+        </ul>
+    </div>
+   <div id="cpntainerers"></div>
+</body>
+<script>
+    var containers = document.getElementById("cpntainerers")
+    var array = [{
+        photo:"https://rukminim1.flixcart.com/image/612/612/k5bcscw0/top/j/d/5/s-ss20an148tc74-and-original-imafny7zabjgh2fh.jpeg?q=70"
+        ,title:"AND Casual Cape Sleeve Printed Women Multic"
+        ,price:"500"    },{
+        photo:"https://rukminim1.flixcart.com/image/612/612/jpyddow0/trouser/z/x/f/28-coay03tr53lr-and-original-imafc28ve6pfgpjk.jpeg?q=70"
+        ,title:"AND Casual Cape Sleeve Printed Women Multic"
+        ,price:"700"    },{
+        photo:"https://rukminim1.flixcart.com/image/612/612/kg9qbgw0/top/n/z/v/xxl-ss20at120tdnm-and-original-imafwjyfzxhu6rym.jpeg?q=70"
+        ,title:"AND Casual Cape Sleeve Printed Women Multic"
+        ,price:"900"    },{
+        photo:"https://rukminim1.flixcart.com/image/612/612/khxqt8w0/top/h/x/f/s-ss20an083tc108-and-original-imafxrzgnfnxhzqu.jpeg?q=70"
+        ,title:"AND Casual Cape Sleeve Printed Women Multic"
+        ,price:"400"    },{
+        photo:"https://rukminim1.flixcart.com/image/612/612/k5fn3ww0/dress/s/z/z/s-ss20an133drc2-and-original-imafz36v9d6aesjc.jpeg?q=70"
+        ,title:"AND Casual Cape Sleeve Printed Women Multic"
+        ,price:"200"    },
+        {
+        photo:"https://rukminim1.flixcart.com/image/612/612/k8ddoy80/top/z/f/j/l-ss20an186tb91-and-original-imafqehgd5q3szkh.jpeg?q=70"
+        ,title:"AND Casual Cape Sleeve Printed Women Multic"
+        ,price:"1100"    },
+        {
+        photo:"https://rukminim1.flixcart.com/image/612/612/k6gsk280/top/y/w/9/xxl-ss20an204tb90-and-original-imafzx4t74cw5mmb.jpeg?q=70"
+        ,title:"AND Casual Cape Sleeve Printed Women Multic"
+        ,price:"800"    },
+        {
+        photo:"https://rukminim1.flixcart.com/image/612/612/k6gsk280/top/y/w/9/xxl-ss20an204tb90-and-original-imafzx4t74cw5mmb.jpeg?q=70"
+        ,title:"AND Casual Cape Sleeve Printed Women Multic"
+        ,price:"500"    },
+        {
+        photo:"https://rukminim1.flixcart.com/image/612/612/khxqt8w0/top/h/k/n/m-aw19an066tn3-and-original-imafxujxsqughgfg.jpeg?q=70"
+        ,title:"AND Casual Cape Sleeve Printed Women Multic"
+        ,price:"1400"    },
+        {
+        photo:"https://rukminim1.flixcart.com/image/612/612/kdqa4y80/shrug/h/g/t/s-coan4147shnet-and-original-imafukpzgxwecdga.jpeg?q=70"
+        ,title:"AND Casual Cape Sleeve Printed Women Multic"
+        ,price:"500"    },
+        {
+        photo:"https://rukminim1.flixcart.com/image/612/612/khxqt8w0/top/9/5/z/s-ss20an196tc49-and-original-imafxtygvkdcyh7h.jpeg?q=70"
+        ,title:"AND Casual Cape Sleeve Printed Women Multic"
+        ,price:"1200"    },
+        {
+        photo:"https://rukminim1.flixcart.com/image/612/612/jqwny4w0/top/h/k/2/s-eaway025tp14-and-original-imafctnhhhudgkaj.jpeg?q=70"
+        ,title:"AND Casual Cape Sleeve Printed Women Multic"
+        ,price:"1000"    },
+        {
+        photo:"https://rukminim1.flixcart.com/image/612/612/k9re3rk0/top/m/f/c/m-aw18av105tch-and-original-imafrgnyuzvrmgue.jpeg?q=70"
+        ,title:"AND Casual Cape Sleeve Printed Women Multic"
+        ,price:"900"    },
+        {
+        photo:"https://rukminim1.flixcart.com/image/612/612/kw104nk0/shrug/k/n/6/m-1-fw20an158shsud-and-original-imag8szajk4tzqf4.jpeg?q=70"
+        ,title:"AND Casual Cape Sleeve Printed Women Multic"
+        ,price:"700"    },
+        {
+        photo:"https://rukminim1.flixcart.com/image/612/612/ki0loy80/top/r/h/7/s-ss20an231tb106-and-original-imafxvrgyhmzj6fy.jpeg?q=70"
+        ,title:"AND Casual Cape Sleeve Printed Women Multic"
+        ,price:"100"    },
+        {
+        photo:"https://rukminim1.flixcart.com/image/612/612/khxqt8w0/top/n/f/n/s-ss20an160tb80-and-original-imafxtk5ytrcbzpe.jpeg?q=70"
+        ,title:"AND Casual Cape Sleeve Printed Women Multic"
+        ,price:"300"    },
+        
+        
+    ]
+    array.forEach(data => {
+        var list = document.createElement('div')
+        list.setAttribute("class","list")
+        var imagebox = document.createElement('div')
+        imagebox.setAttribute("class","imagebox")
+        var image = document.createElement('img')
+        image.setAttribute("class","image")
+        image.src = data.photo
+        imagebox.append(image)
+        var title = document.createElement('p')
+        title.innerHTML = data.title
+        title.setAttribute("class","title")
+        var price = document.createElement('p')
+        price.setAttribute("class","price")
+        price.innerHTML = data.price + " INR"
+        var button = document.createElement("button")
+        button.setAttribute("class","button")
+        button.innerHTML = "ADD TO CART"
+        button.onclick = function() {
+            var map = {
+                photo:data.photo,
+                title:data.title,
+                price:data.price,
+            }
+            
+            var cat = JSON.parse(localStorage.getItem("Add"))
+            cat.push(map)
+            localStorage.setItem("Add",JSON.stringify(cat))
+        }
+       list.append(imagebox,title,price,button)
+       containers.append(list)
+        
+    });
+   // console.log(array[0].photo)
+
+
+    
+</script>
+</html>
